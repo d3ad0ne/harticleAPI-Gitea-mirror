@@ -4,10 +4,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-############CUSTOM###########
-/src/test.py
-responseTester.py
-
 # C extensions
 *.so
 
@@ -177,3 +173,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+############CUSTOM###########
+/src/test.py
+responseTester.py
+/sys.stdout
