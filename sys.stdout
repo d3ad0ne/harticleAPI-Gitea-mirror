@@ -1,0 +1,118 @@
+2025-08-29 20:42:34.367 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 20:47:34.345 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 20:47:34.403 | INFO | DBwork.py:65 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 20:47:34.476 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 20:47:34.495 | ERROR | DBwork.py:91 - Error during table creation: syntax error at or near "article_url"
+LINE 5:     article_url VARCHAR(3000) UNIQUE NOT NULL,
+            ^
+
+2025-08-29 20:48:24.020 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 20:48:24.099 | INFO | DBwork.py:65 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 20:48:24.454 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 20:48:24.477 | ERROR | DBwork.py:91 - Error during table creation: syntax error at or near ")"
+LINE 7: )
+        ^
+
+2025-08-29 20:49:37.475 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 20:49:37.498 | INFO | DBwork.py:65 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 20:49:37.574 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 20:49:37.602 | ERROR | DBwork.py:91 - Error during table creation: syntax error at or near "to"
+LINE 12:     OWNER to postgres_user;
+                   ^
+
+2025-08-29 20:50:31.676 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 20:50:31.703 | INFO | DBwork.py:65 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 20:50:31.790 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 20:50:31.855 | INFO | DBwork.py:89 - Successfully created table articles in schema harticle if it didn't exist yet
+2025-08-29 21:08:43.249 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:08:43.274 | INFO | DBwork.py:65 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 21:08:43.321 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:08:43.343 | INFO | DBwork.py:89 - Successfully created table articles in schema harticle if it didn't exist yet
+2025-08-29 21:09:01.219 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:09:01.253 | INFO | DBwork.py:65 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 21:09:01.320 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:09:01.349 | INFO | DBwork.py:89 - Successfully created table articles in schema harticle if it didn't exist yet
+2025-08-29 21:12:16.086 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:12:16.109 | INFO | DBwork.py:65 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 21:12:16.161 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:12:16.200 | INFO | DBwork.py:89 - Successfully created table articles in schema harticle if it didn't exist yet
+2025-08-29 21:12:39.738 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:12:40.970 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:16:42.028 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:16:42.051 | INFO | DBwork.py:66 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 21:16:42.052 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-29 21:16:42.176 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:16:42.268 | INFO | DBwork.py:90 - Successfully created table articles in schema harticle if it didn't exist yet
+2025-08-29 21:16:42.269 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-29 21:16:47.546 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:45:13.302 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:45:13.348 | INFO | DBwork.py:66 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 21:45:13.349 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-29 21:45:13.515 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 21:45:13.573 | INFO | DBwork.py:90 - Successfully created table articles in schema harticle if it didn't exist yet
+2025-08-29 21:45:13.573 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-29 22:01:03.641 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 22:01:03.672 | INFO | DBwork.py:66 - Successfully created schema harticle if it didn't exist yet
+2025-08-29 22:01:03.673 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-29 22:01:03.801 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-29 22:01:03.882 | INFO | DBwork.py:90 - Successfully created table articles in schema harticle if it didn't exist yet
+2025-08-29 22:01:03.884 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 00:26:49.887 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 00:32:29.541 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 00:32:29.562 | INFO | DBwork.py:75 - Successfully created schema harticle if it didn't exist yet
+2025-08-30 00:32:29.562 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 00:32:29.604 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 00:32:29.625 | INFO | DBwork.py:99 - Successfully created table articles in schema harticle if it didn't exist yet
+2025-08-30 00:32:29.626 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 00:32:35.060 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 00:32:35.075 | ERROR | DBwork.py:66 - Failed to fetch DB entries: ERROR:  relation "articles" does not exist
+LINE 1: SELECT article_url, rating FROM articles;
+                                        ^
+
+2025-08-30 01:11:28.088 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:13:41.424 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:13:41.442 | ERROR | DBwork.py:48 - Failed to write an entry for article 'test': ERROR:  relation "articles" does not exist
+LINE 1: INSERT INTO articles VALUES ('test', 1);
+                    ^
+
+2025-08-30 01:13:41.443 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 01:16:21.430 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:16:21.450 | ERROR | DBwork.py:48 - Failed to write an entry for article 'test': ERROR:  relation "articles" does not exist
+LINE 1: INSERT INTO Articles VALUES ('test', 1);
+                    ^
+
+2025-08-30 01:16:21.452 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 01:27:16.292 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:27:16.312 | ERROR | DBwork.py:48 - Failed to write an entry for article 'test': ERROR:  invalid input syntax for type integer: "test"
+LINE 1: INSERT INTO harticle.articles VALUES ('test', 1);
+                                              ^
+
+2025-08-30 01:27:16.312 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 01:35:20.928 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:35:20.965 | INFO | DBwork.py:46 - An entry has been written to the PGSQL DB successfully
+2025-08-30 01:35:20.966 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 01:38:27.104 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:38:27.123 | ERROR | DBwork.py:48 - Failed to write an entry for article 'test': ERROR:  duplicate key value violates unique constraint "articles_article_url_key"
+DETAIL:  Key (article_url)=(test) already exists.
+
+2025-08-30 01:38:27.124 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 01:41:24.219 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:41:24.255 | INFO | DBwork.py:46 - An entry has been written to the PGSQL DB successfully
+2025-08-30 01:41:24.256 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 01:46:31.107 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:46:31.137 | INFO | DBwork.py:46 - An entry has been written to the PGSQL DB successfully
+2025-08-30 01:50:05.814 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:50:05.851 | INFO | DBwork.py:55 - Rating for article 'test2' was cleared successfully
+2025-08-30 01:50:05.851 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 01:50:32.270 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:50:32.301 | INFO | DBwork.py:55 - Rating for article 'test1' was cleared successfully
+2025-08-30 01:50:32.301 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 01:50:35.079 | INFO | DBwork.py:26 - Successfully set connection to the PostgreSQL DB
+2025-08-30 01:50:35.110 | INFO | DBwork.py:55 - Rating for article 'test' was cleared successfully
+2025-08-30 01:50:35.110 | INFO | DBwork.py:36 - Successfully closed connection to the PostgreSQL DB
+2025-08-30 02:04:55.458 | INFO | DBwork.py:80 - All entry pairs have been retrieved successfully
+2025-08-30 02:05:13.018 | INFO | DBwork.py:80 - All entry pairs have been retrieved successfully
+2025-08-30 02:06:51.642 | INFO | DBwork.py:80 - All entry pairs have been retrieved successfully
+2025-08-30 02:10:40.955 | INFO | DBwork.py:80 - All entry pairs have been retrieved successfully
+2025-08-30 02:11:48.088 | INFO | DBwork.py:80 - All entry pairs have been retrieved successfully
+2025-08-30 02:12:19.839 | INFO | DBwork.py:80 - All entry pairs have been retrieved successfully
