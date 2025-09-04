@@ -1,26 +1,7 @@
-import router
 import uvicorn
-from loguru import logger
-import config
-from fastapi import FastAPI
+from app_creator import create_app
 
 
-logging_level = config.logging_level
-logger.add(
-    "sys.stdout",
-    format="{time:YYYY-MM-DD HH:mm:ss.SSS} | {level} | {file}:{line} - {message}",
-    colorize=True,
-    level=logging_level
-)
-
-if config.enable_api_docs:
-    docs_url = '/api/docs'
-else:
-    docs_url = None
-
-app = FastAPI(docs_url=docs_url)
-app.include_router(router.router)
-
-    
-router.main()
-uvicorn.run(app=app, host="127.0.0.1", port=8000, log_level="info")
+if __name__ == '__main__':
+    app = create_app()
+    uvicorn.run(app=app, host="127.0.0.1", port=8000, log_level="info")

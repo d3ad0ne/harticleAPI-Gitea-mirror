@@ -6,7 +6,6 @@ from loguru import logger
 
 
 async def get_article_html(url: str, md: bool = False) -> str:
-    print(url, type(url))
     response = requests.get(url)
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -22,7 +21,7 @@ async def get_article_html(url: str, md: bool = False) -> str:
         else:
             return content.prettify()
     else:
-        logger.error(f'Error during fetching habr article html. Status code: {response.status_code}')
+        logger.error(f'Error during fetching habr response. Status code: {response.status_code}')
 
 
 async def get_articles_from_feed(amount: int) -> list[str]:
@@ -34,4 +33,4 @@ async def get_articles_from_feed(amount: int) -> list[str]:
             urls.append(str(url['href']))
         return urls
     else:
-        logger.error(f'Error during fetching habr article html. Status code: {response.status_code}')
+        logger.error(f'Error during fetching habr response. Status code: {response.status_code}')

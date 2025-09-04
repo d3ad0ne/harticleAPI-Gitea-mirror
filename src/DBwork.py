@@ -4,7 +4,10 @@ from loguru import logger
 
 
 #connection stuff
+connection = None
+
 def set_connection():
+    global connection
     try:
         connection = psycopg2.connect(
         dbname = config.db_name,
@@ -13,7 +16,7 @@ def set_connection():
         host = config.host_name,
         port = config.port
         )
-        return connection
+        logger.info('Connection to PostreSQL DB set successfully')
     except psycopg2.Error as e:
         logger.error(f'Failed to set connection to the PostgreSQL DB: {e.pgerror}')
 
@@ -23,6 +26,7 @@ def close_connection(connection):
         cursor = connection.cursor()
         cursor.close()
         connection.close()
+        logger.info('Connection to PostreSQL DB closed successfully')
     except psycopg2.Error as e:
         logger.error(f'Failed to close PostgreSQL connection: {e.pgerror}')
 
@@ -70,22 +74,19 @@ def get_all_entries(connection):
 
 
 #'create if no any' type functions for schema and table
-def schema_creator(schema_name):
-    conn = set_connection()
-    cur = conn.cursor()
+def schema_creator(schema_name, connection):
+    cur = connection.cursor()
     try:
         cur.execute(f'CREATE SCHEMA IF NOT EXISTS {schema_name};')
-        conn.commit()
+        connection.commit()
         logger.info(f'Successfully created schema {schema_name} if it didn\'t exist yet')
     except psycopg2.Error as e:
         logger.error(f'Error during schema creation: {e}')
-    finally:
-        close_connection(conn)
 
 
-def table_creator(schema_name, table_name):
-    conn = set_connection()
-    cur = conn.cursor()
+
+def table_creator(schema_name, table_name, connection):
+    cur = connection.cursor()
     try:
         cur.execute(f'''
         CREATE TABLE IF NOT EXISTS {schema_name}.{table_name}
@@ -100,9 +101,8 @@ def table_creator(schema_name, table_name):
         ALTER TABLE IF EXISTS {schema_name}.{table_name}
             OWNER to {config.postgres_user};
         ''')
-        conn.commit()
+        connection.commit()
         logger.info(f'Successfully created table {table_name} in schema {schema_name} if it didn\'t exist yet')
     except psycopg2.Error as e:
         logger.error(f'Error during table creation: {e}')
-    finally:
-        close_connection(conn)
+
