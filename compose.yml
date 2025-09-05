@@ -1,6 +1,6 @@
 services:
   habr-article-api:
-    image: git.frik.su/beesquit/habr-article-api:latest
+    image: git.frik.su/n0one/habr-article-api:latest
     container_name: habr-article-api
     ports:
       - 4002:8000
