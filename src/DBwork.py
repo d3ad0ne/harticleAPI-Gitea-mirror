@@ -53,9 +53,14 @@ def delete_entry(article_url, connection):
 def get_all_entries(connection):
     try:
         cursor = connection.cursor()
-        cursor.execute('SELECT article_url, rating FROM harticle.articles;')
-        entries = cursor.fetchall()
+        cursor.execute('SELECT article_url FROM harticle.articles;')
+        urls = cursor.fetchall()
+        cursor.execute('SELECT rating FROM harticle.articles;')
+        ratings = cursor.fetchall()
         logger.info('All entry pairs have been retrieved successfully')
+        entries = {}
+        for i in range(len(urls)):
+            entries[urls[i][0]] = ratings[i][0]
         return entries
     except psycopg2.Error as e:
         logger.error(f'Failed to fetch DB entries: {e.pgerror}')
@@ -93,4 +98,3 @@ def table_creator(schema_name, table_name, connection):
         logger.info(f'Successfully created table {table_name} in schema {schema_name} if it didn\'t exist yet')
     except psycopg2.Error as e:
         logger.error(f'Error during table creation: {e}')
-

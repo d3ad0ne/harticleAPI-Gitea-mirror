@@ -31,7 +31,7 @@ async def ping():
 
 @router.get('/rates')
 async def get_rates():
-    result = dumps(DBwork.get_all_entries(db.connection))
+    result = DBwork.get_all_entries(db.connection)
     return result
 
 
