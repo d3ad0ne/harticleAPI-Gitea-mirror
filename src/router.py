@@ -1,6 +1,6 @@
 import DBwork
+from DBmodel import db
 import scraper
-from DBwork import connection as conn
 from fastapi import Response, status, APIRouter
 from pydantic import BaseModel
 import psycopg2
@@ -31,7 +31,7 @@ async def ping():
 
 @router.get('/rates')
 async def get_rates():
-    result = dumps(DBwork.get_all_entries(conn))
+    result = dumps(DBwork.get_all_entries(db.connection))
     return result
 
 
@@ -40,7 +40,7 @@ async def save_rating(entry: Entry, response: Response):
     try:
         DBwork.add_entry(article_url=entry.url, 
                         rating=entry.rating, 
-                        connection=conn
+                        connection=db.connection
                         )
         message = 'success'
     except psycopg2.Error:
@@ -56,7 +56,7 @@ async def save_rating(entry: Entry, response: Response):
 @router.post('/article/remove_rate')
 async def remove_rating(entry: Entry, response: Response):
     try:
-        DBwork.delete_entry(entry.url, conn)
+        DBwork.delete_entry(entry.url, db.connection)
         message = 'success'
     except psycopg2.Error:
         response.status_code = status.HTTP_500_INTERNAL_SERVER_ERROR

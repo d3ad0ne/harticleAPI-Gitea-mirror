@@ -1,15 +1,13 @@
 import psycopg2
 import config
 from loguru import logger
+from DBmodel import db
 
 
 #connection stuff
-connection = None
-
 def set_connection():
-    global connection
     try:
-        connection = psycopg2.connect(
+        db.connection = psycopg2.connect(
         dbname = config.db_name,
         user = config.postgres_user,
         password = config.postgres_password,
@@ -50,16 +48,6 @@ def delete_entry(article_url, connection):
         logger.info(f'Rating for article \'{article_url}\' was cleared successfully')
     except psycopg2.Error as e:
         logger.error(f'Failed to clear a rating entry for article \'{article_url}\': {e.pgerror}')
-
-
-# def delete_rating(article_url, connection):
-#     try:
-#         cursor = connection.cursor()
-#         cursor.execute("UPDATE harticle.articles SET rating = NULL WHERE article_url = %s;", (article_url,))
-#         connection.commit()
-#         logger.info(f'Rating for article \'{article_url}\' was cleared successfully')
-#     except psycopg2.Error as e:
-#         logger.error(f'Failed to clear a rating entry for article \'{article_url}\': {e.pgerror}')
 
 
 def get_all_entries(connection):
