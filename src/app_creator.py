@@ -11,8 +11,8 @@ if config.enable_api_docs:
 else:
     docs_url = None
 
-schema_name = 'harticle'
-table_name = 'articles'
+schema_name = config.schema_name
+table_name = config.table_name
 
 
 @asynccontextmanager
