@@ -1,0 +1,36 @@
+services:
+  habr-article-api:
+    image: git.frik.su/beesquit/habr-article-api:latest
+    container_name: habr-article-api
+    ports:
+      - 4002:8000
+    environment:
+      DB_NAME: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      HOST_NAME: "localhost"
+      PG_PORT: "8000"
+      LOGGING_LEVEL: "INFO"
+      ENABLE_API_DOCS: "True"
+      UVI_LOGGING_LEVEL: "info"
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:latest
+    container_name: habr-article-api-postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "4001:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
