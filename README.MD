@@ -211,7 +211,7 @@ Get html bodies of N last articles from [habr.com/feed](habr.com/feed)
 ### Get MD of N articles from habr.com/feed
 
 ```http
-  POST /api/article/api/articles/get/html
+  POST /api/article/api/articles/get/md
 ```
 
 Get MD of N last articles from [habr.com/feed](habr.com/feed)
