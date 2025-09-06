@@ -4,7 +4,6 @@ import scraper
 from fastapi import Response, status, APIRouter
 from pydantic import BaseModel
 import psycopg2
-from json import dumps
 import base64
 
 
@@ -69,14 +68,14 @@ async def remove_rating(entry: Entry, response: Response):
 async def get_article_html(article: Article, response: Response = None):
     html_string = await scraper.get_article_html(article.url)
     b64_string = base64.b64encode(html_string.encode('utf-8')).decode('utf-8')
-    return Response(content=b64_string, media_type='text/plain')
+    return Response(content=article.url + '\r\n' + b64_string, media_type='text/plain')
 
 
 @router.post('/article/get/md')
 async def get_article_md(article: Article, response: Response = None):
     md_string = await scraper.get_article_html(article.url, md=True)
     b64_string = base64.b64encode(md_string.encode('utf-8')).decode('utf-8')
-    return Response(content=b64_string, media_type='text/plain')
+    return Response(content=article.url + '\r\n' + b64_string, media_type='text/plain')
 
 
 @router.post('/articles/get/html')
