@@ -12,12 +12,15 @@ if config.enable_api_docs:
 else:
     docs_url = None
 
+schema_name = 'harticle'
+table_name = 'articles'
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     DBwork.set_connection()
-    DBwork.schema_creator(config.schema_name, db.connection)
-    DBwork.table_creator(config.schema_name, config.table_name, db.connection)    
+    DBwork.schema_creator(schema_name, db.connection)
+    DBwork.table_creator(schema_name, table_name, db.connection)    
     yield
     DBwork.close_connection(db.connection)
 

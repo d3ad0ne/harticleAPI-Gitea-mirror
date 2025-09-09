@@ -6,8 +6,6 @@ postgres_user = config('POSTGRES_USER')
 postgres_password = config('POSTGRES_PASSWORD')
 host_name = config('HOST_NAME')
 port = config('PG_PORT')
-schema_name = config('SCHEMA_NAME')
-table_name = config('TABLE_NAME')
 
 enable_api_docs = config('ENABLE_API_DOCS', cast=bool)
 
