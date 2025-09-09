@@ -17,6 +17,7 @@ def set_connection():
         logger.info('Connection to PostreSQL DB set successfully')
     except psycopg2.Error as e:
         logger.error(f'Failed to set connection to the PostgreSQL DB: {e.pgerror}')
+        exit()
 
 
 def close_connection(connection):
