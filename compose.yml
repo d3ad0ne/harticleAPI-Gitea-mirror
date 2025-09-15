@@ -8,8 +8,8 @@ services:
       DB_NAME: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      HOST_NAME: "localhost"
-      PG_PORT: "8000"
+      HOST_NAME: postgres
+      PG_PORT: 5432
       LOGGING_LEVEL: "INFO"
       ENABLE_API_DOCS: "True"
       UVI_LOGGING_LEVEL: "info"
@@ -27,7 +27,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - "4001:5432"
+      - :5432
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "postgres"]
       interval: 5s
