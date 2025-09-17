@@ -11,6 +11,7 @@ router = APIRouter(prefix='/api')
 
 
 class Entry(BaseModel):
+    username: str
     url: str
     rating: int | None = None
 
@@ -47,6 +48,7 @@ async def save_rating(entry: Entry, response: Response):
         message = 'internal server error'
     finally:
         return {'message': message,
+                'username': entry.username,
                 'url': entry.url,
                 'rating': entry.rating
                 }
