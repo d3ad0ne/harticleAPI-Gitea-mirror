@@ -1,6 +1,6 @@
 services:
   habr-article-api:
-    image: github.com/d3ad0ne/harticleAPI:latest
+    image: github.com/d3ad0ne/harticleAPI-Gitea-mirror:latest
     container_name: habr-article-api
     ports:
       - 4002:8000
